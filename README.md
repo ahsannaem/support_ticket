@@ -90,7 +90,7 @@ Reset the database (if needed):
 ```bash
 docker-compose down -v
 ```
-
+Note: You might get into port configration issues because of ports already bound to some serivce so you'll have to take care of that.
 ## Local Development (Optional)
 
 To run locally without Docker:
