@@ -30,6 +30,26 @@ if not POSTGRES_CONNECTION_STRING:
 # === Nodes ===
 
 async def classify_ticket(state: State) -> State:
+    """This function classifies the support ticket based on its subject and description.
+
+    It uses a language model to determine the category of the ticket, which can be one of:
+    - Billing
+    - Technical
+    - Security
+    - General
+
+    The classification is stored in the 'category' field of the state.
+
+    Args:
+        state (State): The current state of the support ticket, which includes 'subject' and 'description'.
+
+    Raises:
+        ValueError: If the 'subject' or 'description' is missing or empty.
+        ValueError: If the classification result is unexpected.
+
+    Returns:
+        State: The updated state with the classified category.
+    """
     print("Invoking classifier LLM")
     llm = get_llm()
 
@@ -58,108 +78,218 @@ async def classify_ticket(state: State) -> State:
     return state
 
 async def rag_node(state: State) -> State:
-    print(f"Running RAG node for state: {state}")
-    refresh_rag()
+    """This function retrieves relevant documents from the vector store based on the ticket's subject and description.
 
-    embedding_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    It uses the PGVector vector store to find documents that match the category of the ticket.
+    The retrieved documents are stored in the 'context_docs' field of the state.
 
-    vectorstore = PGVector.from_existing_index(
-        embedding=embedding_model,
-        collection_name="support_docs",
-        connection=POSTGRES_CONNECTION_STRING,
-    )
+    Note: This function assumes that the vector store has been properly initialized and contains relevant documents.
 
-    query = f"{state['subject']} {state['description']}".strip()
-    category = state['category'].lower()
+    Args:
+        State (State): The current state of the support ticket, which includes 'subject', 'description', and 'category'.
 
-    retriever = vectorstore.as_retriever(
-        search_kwargs={"filter": {"category": category}, "k": 5}
-    )
+    Raises:
+        Exception: If there is an error during the retrieval process.
 
-    docs = retriever.invoke(query)
-    state['context_docs'] = docs
-    return state
+    Returns:
+        State: 
+    """
+    try:
+        print(f"Running RAG node for state: {state}")
+        refresh_rag()  # Ensure the vector store is refreshed before retrieval all the embeddings are up to date
 
+        if 'subject' not in state or 'description' not in state or 'category' not in state:
+            raise ValueError("State must contain 'subject', 'description', and 'category' keys.")
+
+        embedding_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+
+        vectorstore = PGVector.from_existing_index(
+            embedding=embedding_model,
+            collection_name="support_docs",
+            connection=POSTGRES_CONNECTION_STRING,
+        )
+
+        query = f"{state['subject']} {state['description']}".strip()
+        category = state['category'].lower()
+
+        retriever = vectorstore.as_retriever(
+            search_kwargs={"filter": {"category": category}, "k": 5}
+        )
+
+        docs = retriever.invoke(query)
+        state['context_docs'] = docs
+        return state
+    except ValueError as ve:
+        print(f"ValueError during RAG retrieval: {ve}")
+        state['context_docs'] = [Document(page_content="No relevant documents found.")]
+        return state
+    except Exception as e:
+        print(f"Error during RAG retrieval: {e}")
+        state['context_docs'] = [Document(page_content="No relevant documents found.")]
+        return state
+    
 rag_node_runnable = RunnableLambda(rag_node)
 
 async def generate_draft(state: State) -> State:
-    print("Generating draft response")
-    llm = get_llm()
+    """This function generates a draft response for the support ticket based on the subject, description, and context documents.
+    
+    It uses a language model to create a professional and concise response, incorporating any review feedback if available.
+    It updates the state with the generated draft response.
 
-    context_text = "\n\n".join([doc.page_content for doc in state['context_docs']])
+    Note: The function assumes that the 'context_docs' field in the state contains relevant documents for generating the response.
+    
+    Args:
+        state (State): The current state of the support ticket, which includes 'subject', 'description', and 'context_docs'.
 
-    prompt = PromptTemplate.from_template(DRAFT_RESPONSE_PROMPT)
-    if "feedback" not in state or not isinstance(state["feedback"], list):
-        state["feedback"] = []
+    Raises:
+        Exception: If there is an error during the draft generation process.
 
-    prompt_value = prompt.invoke({
-        "subject": state["subject"],
-        "description": state["description"],
-        "context": context_text,
-        "review": state["feedback"]
-    })
+    Returns:
+        State:
+    """
+    try:
+        print("Generating draft response")
+        llm = get_llm()
 
-    response = llm.invoke(prompt_value)
+        context_text = "\n\n".join([doc.page_content for doc in state['context_docs']])
 
-    if "draft" not in state or not isinstance(state["draft"], list):
-        state["draft"] = []
+        prompt = PromptTemplate.from_template(DRAFT_RESPONSE_PROMPT)
+        if "feedback" not in state or not isinstance(state["feedback"], list):
+            state["feedback"] = []
 
-    state["draft"].append(response.content.strip())
-    print(f"Draft generated: {response.content.strip()}")
-    return state
+        prompt_value = prompt.invoke({
+            "subject": state["subject"],
+            "description": state["description"],
+            "context": context_text,
+            "review": state["feedback"]
+        })
 
+        response = llm.invoke(prompt_value)
+
+        if "draft" not in state or not isinstance(state["draft"], list):
+            state["draft"] = []
+
+        state["draft"].append(response.content.strip())
+        print(f"Draft generated: {response.content.strip()}")
+        return state
+    except Exception as e:
+        print(f"Error during draft generation: {e}")
+        state["draft"].append("An error occurred while generating the draft response.")
+        return state
+    
 async def review_draft(state: State) -> State:
-    print("Reviewing draft")
-    llm = get_llm()
+    """This function reviews the latest draft response for the support ticket.
 
-    latest_draft = state["draft"][-1]
+    It uses a language model to evaluate the draft based on predefined criteria, such as professionalism, clarity, and adherence to company policy.
+    The review results are stored in the state, including the status (approved or rejected), feedback, and any keywords for improvement.
+
+    Args:
+        state (State):
+
+    Returns:
+        State: 
+    """
+    try:
+        print("Reviewing draft")
+        llm = get_llm()
+
+        latest_draft = state["draft"][-1]
+        
+
+        prompt = PromptTemplate.from_template(REVIEW_DRAFT_PROMPT)
+        prompt_value = prompt.invoke({"latest_draft": latest_draft, "subject": state["subject"], "description": state["description"]})
+
+        structured_llm = llm.with_structured_output(ReviewResult)
+        response = structured_llm.invoke(prompt_value)
+
+        print(f"Review result: {response.status}, Feedback: {response.feedback}, Keywords: {response.retrive_improve}")
+
+        if response.status == "rejected" and response.feedback:
+            state["feedback"].append(response.feedback)
+            state["review_count"] = state.get("review_count", 0) + 1
+            state['status'] = response.status
+            state['retrive_improve'] = response.retrive_improve or []
+            
+        else:
+            state["status"] = "approved"
+            state["feedback"].append("Draft approved by reviewer.")
+            state["review_count"] = 0
+
+        return state
+    except Exception as e:
+        print(f"Error during draft review: {e}")
+        state["status"] = "rejected"
+        state["feedback"].append("An error occurred during the review process.")
+        state["review_count"] = state.get("review_count", 0) + 1
+        state['retrive_improve'] = []
+        return state
+    
+    
+def dump_state_to_csv(state: State) -> State:
+    """this function dumps the state of a rejected ticket to a CSV file for record-keeping.
+
+    It creates a directory named 'rejected_tickets' if it doesn't exist, and appends the ticket details to a CSV file.
+    The CSV file includes the timestamp, subject, description, drafts, and feedbacks of the rejected ticket.
+
+    Note: This function is called when the review count 2 .
     
 
-    prompt = PromptTemplate.from_template(REVIEW_DRAFT_PROMPT)
-    prompt_value = prompt.invoke({"latest_draft": latest_draft, "subject": state["subject"], "description": state["description"]})
+    Args:
+        state (State): 
+    Returns:
+        State: 
+    """
+    try:
+        print("Dumping rejected ticket to CSV")
+        os.makedirs("rejected_tickets", exist_ok=True)
+        filepath = "rejected_tickets/rejected_tickets.csv"
 
-    structured_llm = llm.with_structured_output(ReviewResult)
-    response = structured_llm.invoke(prompt_value)
+        data = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "subject": state["subject"],
+            "description": state["description"],
+            "category": state["category"],
+            "drafts": "\n---\n".join(state["draft"]),
+            "feedbacks": "\n---\n".join(state["feedback"]),
+        }
 
-    print(f"Review result: {response.status}, Feedback: {response.feedback}, Keywords: {response.retrive_improve}")
+        df = pd.DataFrame([data])
+        if os.path.exists(filepath):
+            df.to_csv(filepath, mode="a", index=False, header=False, encoding="utf-8")
+        else:
+            df.to_csv(filepath, mode="w", index=False, header=True, encoding="utf-8")
 
-    if response.status == "rejected" and response.feedback:
-        state["feedback"].append(response.feedback)
-        state["review_count"] = state.get("review_count", 0) + 1
-        state['status'] = response.status
-        state['retrive_improve'] = response.retrive_improve or []
-        
-    else:
-        state["status"] = "approved"
-        state["feedback"].append("Draft approved by reviewer.")
-        state["review_count"] = 0
-
-    return state
-
-def dump_state_to_csv(state: State) -> State:
-    print("Dumping rejected ticket to CSV")
-    os.makedirs("rejected_tickets", exist_ok=True)
-    filepath = "rejected_tickets/rejected_tickets.csv"
-
-    data = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "subject": state["subject"],
-        "description": state["description"],
-        "category": state["category"],
-        "drafts": "\n---\n".join(state["draft"]),
-        "feedbacks": "\n---\n".join(state["feedback"]),
-    }
-
-    df = pd.DataFrame([data])
-    if os.path.exists(filepath):
-        df.to_csv(filepath, mode="a", index=False, header=False, encoding="utf-8")
-    else:
-        df.to_csv(filepath, mode="w", index=False, header=True, encoding="utf-8")
-
-    print(f"Rejected ticket saved to {filepath}")
-    return state
+        print(f"Rejected ticket saved to {filepath}")
+        return state
+    except FileNotFoundError as fnf_error:
+        print(f"File not found error during CSV dump: {fnf_error}")
+        state["status"] = "error"
+        state["feedback"].append("An error occurred while dumping the ticket to CSV.")
+        return state
+    except pd.errors.EmptyDataError as ede:
+        print(f"Empty data error during CSV dump: {ede}")
+        state["status"] = "error"
+        state["feedback"].append("An error occurred while dumping the ticket to CSV.")
+        return state
+    except PermissionError as pe:
+        print(f"Permission error during CSV dump: {pe}")
+        state["status"] = "error"
+        state["feedback"].append("An error occurred while dumping the ticket to CSV.")
+        return state
+    except Exception as e:
+        print(f"Error during CSV dump: {e}")
+        state["status"] = "error"
+        state["feedback"].append("An error occurred while dumping the ticket to CSV.")
+        return state
 
 def route_based_on_review(state: State) -> str:
+    """Routes the state based on the review status.
+
+    If the review status is "approved", it routes to format_output.
+    If the review count is 2 or more, it routes to dump_state.
+    Otherwise, it routes back to retriver for another attempt.
+
+    """
     if state['status'] == "approved":
         return "format_output"
     elif state.get("review_count", 0) >= 2:
@@ -168,6 +298,8 @@ def route_based_on_review(state: State) -> str:
         return "retriver"
 
 async def format_output(state: State) -> Output:
+    """Formats the output based on the review status."""
+    print("Formatting output")
     if state["status"] == "approved":
         return Output(message=state["draft"][-1])
     else:
