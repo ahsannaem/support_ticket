@@ -1,4 +1,4 @@
-    """This module provides common utilities for the agent, including document loading and PGVector retriever creation.
+"""This module provides common utilities for the agent, including document loading and PGVector retriever creation.
 
     It handles loading and splitting documents, creating a PGVector retriever, and managing environment variables.
     

@@ -50,12 +50,15 @@ cd support_ticket
 Create a `.env` file in the project root (`graph/`) with the following:
 
 ```plaintext
+PYTHONPATH=./src
 LANGSMITH_PROJECT=support_ticket_agent
 GOOGLE_API_KEY=<your-google-api-key>
+POSTGRES_CONNECTION_STRING=<your-postgres-vector-db-connection-string>
 ```
 
 - Replace `<your-google-api-key>` with your Google API key for embeddings.
 - Ensure `LANGSMITH_PROJECT` matches your LangSmith project name.
+- Replace `<your-postgres-vector-db-connection-string>` with your PGvector connection string.
 
 ### 3. Verify Project Files
 
@@ -95,13 +98,14 @@ To run locally without Docker:
 1. Activate virtual environment:
    ```bash
    python -m venv env
-   source env/Scripts/activate  # Windows
+   source env/Scripts/activate  
    ```
 
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+  Note: You can skip step 3 and 4 if you already have some instance of vector database already running.
 3. Spin up PGvector container
   ```bash
     docker run --name pgvector-container -e POSTGRES_USER=langchain -e POSTGRES_PASSWORD=langchain -e POSTGRES_DB=langchain -p 6024:5432 -d pgvector/pgvector:pg16
