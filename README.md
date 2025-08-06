@@ -102,13 +102,21 @@ To run locally without Docker:
    ```bash
    pip install -r requirements.txt
    ```
+3. Spin up PGvector container
+  ```bash
+    docker run --name pgvector-container -e POSTGRES_USER=langchain -e POSTGRES_PASSWORD=langchain -e POSTGRES_DB=langchain -p 6024:5432 -d pgvector/pgvector:pg16
+  ```
+4. Add database connection string to env file
+  ```bash
+  POSTGRES_CONNECTION_STRING = postgresql+psycopg://langchain:langchain@localhost:6024/langchain
+  ```
 
-3. Run the server:
+5. Run the server:
    ```bash
    langgraph dev --allow-blocking
    ```
 
-4. Access the API and Studio UI as above.
+6. Access the API and Studio UI as above.
 
 ## Contributing
 
