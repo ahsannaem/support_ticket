@@ -42,7 +42,7 @@ Clone the project to your local machine:
 
 ```bash
 git clone https://github.com/ahsannaem/support_ticket.git
-cd graph
+cd support_ticket
 ```
 
 ### 2. Configure Environment Variables
