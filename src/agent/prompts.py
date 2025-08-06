@@ -1,4 +1,3 @@
-# prompts.py
 # Contains prompts for the support ticket resolution agent
 # Each prompt assigns a role and enforces company policy for professional, compliant responses
 
