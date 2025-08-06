@@ -1,0 +1,250 @@
+Entry 1:
+Issue: App crashes on startup.
+Description: The application closes immediately after launching.
+Solution: Ensure the app is updated to the latest version. Clear the app cache and data. If problem persists, uninstall and reinstall the app. Check device compatibility and operating system version.
+
+Entry 2:
+Issue: Unable to upload files.
+Description: Users cannot upload files; upload fails or times out.
+Solution: Verify the internet connection. Confirm file size does not exceed 10MB limit. Try using a different browser or device. Clear browser cache and disable any browser extensions interfering with uploads. Contact support if the issue persists.
+
+Entry 3:
+Issue: Slow performance on mobile app.
+Description: The mobile app is sluggish or freezes intermittently.
+Solution: Close unnecessary background apps to free memory. Confirm device OS version is iOS 14+ or Android 10+. Restart the device. Update the app to the latest version.
+
+Entry 4:
+Issue: Login failure on mobile.
+Description: Users cannot log in via the mobile app.
+Solution: Verify username and password. Use the ‘Forgot Password’ option if needed. Check for active billing holds or account suspensions. Update the app and OS to latest versions.
+
+Entry 5:
+Issue: Error message "Network unavailable" when online.
+Description: App reports no network even though device is connected.
+Solution: Restart the device and router. Clear app cache. Check if VPN or firewall settings are blocking access. Try connecting on a different network.
+
+Entry 6:
+Issue: Notifications not appearing.
+Description: Users do not receive push notifications from the app.
+Solution: Check notification settings in device OS and app settings. Ensure Do Not Disturb mode is off. Update the app and OS. Reinstall app if needed.
+
+Entry 7:
+Issue: App freezes during video playback.
+Description: Video playback stutters or the app freezes.
+Solution: Clear app cache. Ensure sufficient device storage and RAM. Update the app and device OS. Try playing videos on Wi-Fi instead of cellular network.
+
+Entry 8:
+Issue: Feature X not loading.
+Description: A specific feature in the app fails to load or display content.
+Solution: Confirm user permissions and account status. Clear app cache. Log out and log back in. If issue persists, report error code to support.
+
+Entry 9:
+Issue: Unable to sync data across devices.
+Description: Data changes on one device do not appear on others.
+Solution: Verify internet connectivity on all devices. Ensure user is logged into the same account on all devices. Force a sync or refresh from settings. Update app versions.
+
+Entry 10:
+Issue: Password reset email not received.
+Description: User requests password reset but does not get the email.
+Solution: Confirm the email address is correct. Check spam/junk folders. Resend the reset email. Verify email server status.
+
+Entry 11:
+Issue: Error code 403 during API calls.
+Description: API requests return HTTP 403 Forbidden error.
+Solution: Check API authentication credentials and tokens. Confirm user permissions. Review rate limits and quota usage. Renew tokens if expired.
+
+Entry 12:
+Issue: Device incompatible with app.
+Description: App will not install or run on a specific device.
+Solution: Verify device meets minimum hardware and OS requirements. Provide list of supported devices and OS versions. Recommend device upgrade if necessary.
+
+Entry 13:
+Issue: Cannot connect to VPN.
+Description: VPN connection fails with timeout or authentication errors.
+Solution: Verify VPN credentials and server addresses. Check firewall settings and network restrictions. Restart the VPN client and device. Update VPN software.
+
+Entry 14:
+Issue: Software update fails to install.
+Description: Update downloads but installation fails or freezes.
+Solution: Ensure sufficient free storage space. Restart device. Clear update cache. Try manual update installation.
+
+Entry 15:
+Issue: Application running out of memory.
+Description: App crashes or slows down due to memory exhaustion.
+Solution: Close background applications. Clear app cache and data. Restart device. Monitor app memory usage and report high usage issues.
+
+Entry 16:
+Issue: Cannot access cloud storage.
+Description: User cannot access files in cloud storage linked to app.
+Solution: Verify internet connection. Check storage account login credentials. Confirm permissions to access storage. Report any outage notifications.
+
+Entry 17:
+Issue: Account locked due to suspicious activity.
+Description: User cannot log in because account is locked.
+Solution: Wait for automatic unlock (typically 30 minutes) or follow account recovery process. Reset password using verified email or phone. Contact support if lock persists.
+
+Entry 18:
+Issue: Error 500 server error.
+Description: Users see a server error when performing actions.
+Solution: Inform users of temporary server issues. Advise retrying after some time. Report error to server operations team.
+
+Entry 19:
+Issue: Cannot enable location services.
+Description: App requires location but fails to get permission.
+Solution: Check device location settings and permissions for the app. Restart device. Update app and OS.
+
+Entry 20:
+Issue: App language settings not saving.
+Description: Changes to language preferences do not persist.
+Solution: Clear app cache and data. Reapply language settings. Update the app.
+
+Entry 21:
+Issue: Bluetooth device not pairing.
+Description: Bluetooth accessories fail to connect with the app/device.
+Solution: Restart Bluetooth on device. Forget and re-pair the device. Check for device firmware updates.
+
+Entry 22:
+Issue: QR code scanner not working.
+Description: Scanner feature fails to detect or scan QR codes.
+Solution: Check camera permissions. Ensure camera lens is clean and unobstructed. Update app and device OS.
+
+Entry 23:
+Issue: Cannot play audio files.
+Description: Audio playback fails or produces no sound.
+Solution: Check device volume and mute settings. Test with other apps. Clear app cache. Update app.
+
+Entry 24:
+Issue: App automatically logs out.
+Description: User session ends unexpectedly.
+Solution: Check network stability. Avoid multiple concurrent logins. Increase session timeout settings if possible.
+
+Entry 25:
+Issue: Payment gateway integration issues.
+Description: Payments fail or time out during checkout.
+Solution: Verify payment gateway API keys and endpoints. Monitor gateway status pages. Handle errors gracefully and retry logic.
+
+Entry 26:
+Issue: Two-factor authentication codes not received.
+Description: User does not get 2FA codes via SMS or authenticator app.
+Solution: Confirm phone number or authenticator setup. Check spam filters for SMS. Resync authenticator apps. Contact support for manual verification.
+
+Entry 27:
+Issue: Dark mode not applying properly.
+Description: UI remains in light mode despite dark mode enabled.
+Solution: Restart app after changing theme. Check for app updates. Clear app cache.
+
+Entry 28:
+Issue: Cannot share content via social media.
+Description: Share buttons do not work or throw errors.
+Solution: Verify app permissions for social media integration. Update linked social media apps. Clear app cache.
+
+Entry 29:
+Issue: Cannot import contacts.
+Description: Contact import feature fails.
+Solution: Check permissions to access contacts. Ensure contacts format is supported. Update app.
+
+Entry 30:
+Issue: Error "File format not supported."
+Description: Upload or import fails due to unsupported file format.
+Solution: Verify file type compatibility. Convert files to supported formats if necessary.
+
+Entry 31:
+Issue: App installation stuck at 50%.
+Description: Installation hangs midway.
+Solution: Restart device. Clear app store cache. Ensure sufficient storage and stable internet.
+
+Entry 32:
+Issue: Cannot unsubscribe from notifications.
+Description: User wants to disable notifications but option is unresponsive.
+Solution: Guide user to device notification settings. Update app to latest version. Reinstall if necessary.
+
+Entry 33:
+Issue: Device overheating when using app.
+Description: Device becomes hot and battery drains fast.
+Solution: Lower screen brightness. Close background apps. Avoid using app during charging.
+
+Entry 34:
+Issue: Cannot connect to Wi-Fi within app.
+Description: App reports no Wi-Fi connection despite device being connected.
+Solution: Restart Wi-Fi router and device. Forget and reconnect to network. Check app permissions.
+
+Entry 35:
+Issue: App does not auto-update.
+Description: App fails to update automatically.
+Solution: Enable automatic updates in device settings. Check available storage. Update manually if needed.
+
+Entry 36:
+Issue: Unable to export data.
+Description: Data export feature fails or produces corrupted files.
+Solution: Check export format compatibility. Ensure sufficient storage. Retry export after restarting app.
+
+Entry 37:
+Issue: App crashes when switching between screens.
+Description: Switching tabs or pages causes app to crash.
+Solution: Update app. Clear cache. Report bug with device and OS details.
+
+Entry 38:
+Issue: Error syncing calendar events.
+Description: Calendar events do not sync or show errors.
+Solution: Verify calendar account permissions. Reauthorize calendar access. Update app.
+
+Entry 39:
+Issue: Cannot print from app.
+Description: Print option is missing or unresponsive.
+Solution: Check device print service setup. Restart device and app. Update app.
+
+Entry 40:
+Issue: App layout distorted on tablet.
+Description: UI elements overlap or are misaligned on tablets.
+Solution: Update app for tablet compatibility. Check device resolution settings.
+
+Entry 41:
+Issue: Search function not returning results.
+Description: Search returns no results even for existing data.
+Solution: Clear app cache. Ensure search index is updated. Report issue if persists.
+
+Entry 42:
+Issue: App language does not match device language.
+Description: App remains in default language regardless of device settings.
+Solution: Change language in app settings. Clear cache. Update app.
+
+Entry 43:
+Issue: Cannot send messages within app.
+Description: Messaging feature fails to send or receive messages.
+Solution: Check network connection. Verify user permissions. Restart app.
+
+Entry 44:
+Issue: Video calls drop frequently.
+Description: Poor call quality or frequent disconnections.
+Solution: Use Wi-Fi instead of cellular. Close background apps. Check device microphone and camera permissions.
+
+Entry 45:
+Issue: Cannot link external accounts.
+Description: Linking Google, Facebook, or other accounts fails.
+Solution: Verify login credentials for external accounts. Clear app cache. Update app.
+
+Entry 46:
+Issue: App permissions reset after update.
+Description: App loses granted permissions after updating.
+Solution: Re-grant permissions in device settings. Report to development team.
+
+Entry 47:
+Issue: Error code 404 when accessing feature.
+Description: Feature returns ‘Not Found’ error.
+Solution: Verify feature availability for user plan. Update app. Report if persistent.
+
+Entry 48:
+Issue: Auto-save feature not working.
+Description: Changes are lost because auto-save fails.
+Solution: Check app settings to enable auto-save. Update app. Restart device.
+
+Entry 49:
+Issue: App does not remember login credentials.
+Description: User must log in every time the app opens.
+Solution: Enable ‘Remember Me’ option if available. Clear app data. Update app.
+
+Entry 50:
+Issue: Crash on specific user action.
+Description: App crashes only when performing a particular task.
+Solution: Gather logs and reproduce issue. Submit bug report to development.
+

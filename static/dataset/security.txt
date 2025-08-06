@@ -1,0 +1,250 @@
+Entry 1:
+Issue: Suspicious login attempt detected.
+Description: User receives notification of a login from an unrecognized device or location.
+Solution: Advise immediate password reset via the ‘Forgot Password’ link. Enable two-factor authentication (2FA) for added security. Review recent account activity. Contact support if unauthorized access is suspected.
+
+Entry 2:
+Issue: Account locked after multiple failed login attempts.
+Description: User is locked out after entering incorrect password several times.
+Solution: Inform user to wait 30 minutes before retrying. Use the ‘Forgot Password’ option to reset credentials. Contact security support if lockout persists.
+
+Entry 3:
+Issue: How to enable two-factor authentication (2FA).
+Description: User wants to improve account security by enabling 2FA.
+Solution: Navigate to Account Settings > Security. Enable two-factor authentication and follow prompts to link phone number or authenticator app. Store backup codes securely.
+
+Entry 4:
+Issue: Received phishing email.
+Description: User received an email that appears fraudulent, requesting sensitive information.
+Solution: Do not click any links or download attachments. Forward the email to security@company.com for analysis. Delete the email. Change your password and enable 2FA.
+
+Entry 5:
+Issue: Password reset link not working.
+Description: User clicks on the password reset email link but it fails or expires.
+Solution: Request a new password reset email. Check spam/junk folder. Clear browser cache. If issue persists, contact support.
+
+Entry 6:
+Issue: Suspicious activity detected on account.
+Description: Unusual behavior such as password changes, login times, or location changes.
+Solution: Immediately change the password. Review and revoke any unauthorized devices or sessions. Enable 2FA. Contact support for further investigation.
+
+Entry 7:
+Issue: Account recovery after hacking.
+Description: User believes their account was compromised and wants to regain control.
+Solution: Guide user through identity verification steps. Reset password and enable 2FA. Review account activity and secure linked accounts.
+
+Entry 8:
+Issue: How to recognize phishing attempts.
+Description: User wants to learn how to identify fraudulent emails and links.
+Solution: Advise looking for suspicious sender addresses, grammatical errors, unexpected attachments, and urgent requests for credentials. Verify links by hovering over them. Always access sites directly rather than clicking links.
+
+Entry 9:
+Issue: Account session timed out unexpectedly.
+Description: User is logged out without warning during active use.
+Solution: This is a security feature to prevent unauthorized access. Recommend saving work frequently. Increase session timeout duration if possible in settings.
+
+Entry 10:
+Issue: How to update security questions.
+Description: User wants to change answers to security questions.
+Solution: Navigate to Account Settings > Security Questions. Update answers and save. Choose answers that are hard to guess.
+
+Entry 11:
+Issue: Unauthorized password change.
+Description: User did not initiate password change but password was altered.
+Solution: Immediately reset password. Review recent account activity. Enable 2FA. Contact support for account investigation.
+
+Entry 12:
+Issue: Account compromised due to reused password.
+Description: User reused passwords across sites and suffered a breach.
+Solution: Educate user on using unique passwords. Recommend password managers. Enforce password complexity rules. Enable 2FA.
+
+Entry 13:
+Issue: Security alert email not received.
+Description: User expects a security alert but did not receive one.
+Solution: Verify email address on file. Check spam/junk folders. Ensure notification settings are enabled. Resend alert if necessary.
+
+Entry 14:
+Issue: How to disable 2FA temporarily.
+Description: User needs to disable two-factor authentication temporarily.
+Solution: Warn user about risks. Navigate to Account Settings > Security. Disable 2FA after confirming identity. Re-enable as soon as possible.
+
+Entry 15:
+Issue: Lost access to 2FA device.
+Description: User lost their phone or authenticator app access.
+Solution: Use backup codes to regain access. If unavailable, contact support for identity verification and reset 2FA.
+
+Entry 16:
+Issue: How to set up an authenticator app.
+Description: User wants to use an app like Google Authenticator for 2FA.
+Solution: Navigate to Security Settings. Choose ‘Enable Authenticator App.’ Scan QR code with app. Enter generated code to verify.
+
+Entry 17:
+Issue: Security breach notification.
+Description: Company informs users about a data breach.
+Solution: Advise immediate password change. Monitor account activity. Enable 2FA. Follow any additional company instructions.
+
+Entry 18:
+Issue: Suspicious device logged into account.
+Description: Unknown device is shown in login activity.
+Solution: Remove the device from authorized sessions. Change password and enable 2FA. Review recent activity.
+
+Entry 19:
+Issue: How to secure account on public Wi-Fi.
+Description: User wants to protect account when using public Wi-Fi networks.
+Solution: Use VPN services. Avoid logging into sensitive accounts on public networks. Enable 2FA. Log out after sessions.
+
+Entry 20:
+Issue: Account deleted without authorization.
+Description: User account was deleted unexpectedly.
+Solution: Verify identity. Check backup or recovery options. Restore account if possible. Investigate breach.
+
+Entry 21:
+Issue: How to report a security vulnerability.
+Description: User or researcher wants to report a bug or vulnerability.
+Solution: Provide official security contact info or bug bounty program details. Encourage responsible disclosure.
+
+Entry 22:
+Issue: Suspicious software detected on device.
+Description: Antivirus or security software flags malware.
+Solution: Disconnect from network. Run full system scan. Update antivirus definitions. Seek professional assistance if needed.
+
+Entry 23:
+Issue: Encryption not working as expected.
+Description: Data encryption feature fails or reports errors.
+Solution: Verify encryption settings and keys. Update software. Contact support for assistance.
+
+Entry 24:
+Issue: How to securely share sensitive data.
+Description: User wants to share confidential info safely.
+Solution: Recommend encrypted email or secure file-sharing services. Avoid sharing passwords or sensitive info via regular email or chat.
+
+Entry 25:
+Issue: Multi-account security management.
+Description: User manages multiple accounts and wants to streamline security.
+Solution: Use password managers. Enable 2FA on all accounts. Regularly review account permissions.
+
+Entry 26:
+Issue: Login from blocked country.
+Description: Access attempt originates from a restricted region.
+Solution: Block login and notify user. Review IP logs. Advise using VPN or contact support if travel-related.
+
+Entry 27:
+Issue: Suspicious password reset request.
+Description: User receives password reset email without requesting it.
+Solution: Ignore if unexpected. Warn user to check account activity and change password if concerned.
+
+Entry 28:
+Issue: How to detect malware phishing sites.
+Description: User wants to avoid malicious phishing websites.
+Solution: Use browser security extensions. Verify website URLs carefully. Avoid clicking suspicious links.
+
+Entry 29:
+Issue: Data privacy settings.
+Description: User wants to configure who can see their profile data.
+Solution: Navigate to Privacy Settings. Adjust visibility options for profile, posts, and activity.
+
+Entry 30:
+Issue: Biometric login not working.
+Description: Fingerprint or face recognition fails.
+Solution: Clean sensor. Re-register biometric data. Update device software.
+
+Entry 31:
+Issue: Suspicious file attachment received.
+Description: User receives an email with potentially dangerous attachment.
+Solution: Do not open attachment. Forward to security team. Delete email.
+
+Entry 32:
+Issue: Account recovery email changed without authorization.
+Description: User notices recovery email address changed unexpectedly.
+Solution: Immediately secure account. Reset password. Contact support.
+
+Entry 33:
+Issue: How to create a strong password.
+Description: User wants tips for creating secure passwords.
+Solution: Use at least 12 characters with letters, numbers, and symbols. Avoid common words. Use passphrases or password managers.
+
+Entry 34:
+Issue: Security logs not updating.
+Description: User or admin cannot see recent security events.
+Solution: Verify logging service is active. Restart logging agent or software.
+
+Entry 35:
+Issue: Login session hijacked.
+Description: User suspects another party has taken over their session.
+Solution: Log out all sessions. Change password. Enable 2FA. Report incident.
+
+Entry 36:
+Issue: How to avoid social engineering attacks.
+Description: User wants advice on preventing manipulation or scams.
+Solution: Never share passwords or codes. Verify identities before sharing info. Be skeptical of unsolicited requests.
+
+Entry 37:
+Issue: App permissions too broad.
+Description: Concern that app accesses more data than necessary.
+Solution: Review app permissions in device settings. Limit access to essential features only.
+
+Entry 38:
+Issue: How to delete account securely.
+Description: User wants to permanently delete their account.
+Solution: Confirm identity. Follow deletion process in settings. Inform about data retention policies.
+
+Entry 39:
+Issue: Password expired notification.
+Description: User receives alert that password must be changed.
+Solution: Prompt user to update password promptly. Provide guidelines for strong passwords.
+
+Entry 40:
+Issue: Security update failed.
+Description: Installation of security patch fails.
+Solution: Restart device. Free up storage. Retry installation. Contact support.
+
+Entry 41:
+Issue: Unauthorized app installation.
+Description: App installed on device without user consent.
+Solution: Remove app immediately. Scan device for malware. Change passwords.
+
+Entry 42:
+Issue: How to enable security alerts.
+Description: User wants to receive notifications about account activity.
+Solution: Enable alerts in Security Settings. Choose alert types (login, password changes, etc.).
+
+Entry 43:
+Issue: Data breach impact assessment.
+Description: User wants to know the effect of a breach on their data.
+Solution: Review breach notification details. Check affected data types. Follow recommended mitigation steps.
+
+Entry 44:
+Issue: Using VPNs and proxies securely.
+Description: User wants to use VPN or proxy services safely.
+Solution: Choose reputable providers. Avoid free or untrusted VPNs. Enable kill-switch features.
+
+Entry 45:
+Issue: Phishing link clicked accidentally.
+Description: User clicked on a phishing link by mistake.
+Solution: Immediately disconnect device from internet. Change passwords. Scan device for malware. Contact security team.
+
+Entry 46:
+Issue: Session timeout too short.
+Description: User finds session expires too quickly causing frustration.
+Solution: Adjust session timeout settings if possible. Balance security and usability.
+
+Entry 47:
+Issue: How to backup 2FA codes.
+Description: User wants to ensure they do not lose access to 2FA.
+Solution: Store backup codes securely offline. Use secure password managers.
+
+Entry 48:
+Issue: Suspicious device notifications not received.
+Description: User does not get alerts for new device logins.
+Solution: Check notification settings. Verify email and phone number. Resend alerts.
+
+Entry 49:
+Issue: Browser autofill exposes passwords.
+Description: Concern that browser autofill may leak credentials.
+Solution: Disable autofill for passwords. Use dedicated password managers.
+
+Entry 50:
+Issue: How to recognize secure websites.
+Description: User wants to know how to identify trusted sites.
+Solution: Look for HTTPS and padlock icon. Verify certificates. Avoid entering credentials on unsecured pages.
+

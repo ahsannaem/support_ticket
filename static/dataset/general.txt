@@ -1,0 +1,251 @@
+Entry 1:
+Issue: How to update profile information.
+Description: User wants to change their personal details such as email, name, or contact info.
+Solution: Log in to your account, go to 'Profile Settings,' update the fields you wish to change, and save. Verify changes if an email confirmation is required.
+
+Entry 2:
+Issue: How to reset a forgotten password.
+Description: User cannot remember their password and needs to reset it.
+Solution: Use the 'Forgot Password' link on the login page. Enter your registered email to receive a password reset link. Follow the instructions to create a new password.
+
+Entry 3:
+Issue: How to contact customer support.
+Description: User needs help beyond self-service options.
+Solution: Submit a ticket via the support portal at support.company.com. Include your account ID, detailed issue description, and relevant screenshots or error messages.
+
+Entry 4:
+Issue: Account access issues despite correct credentials.
+Description: User cannot log in even though username and password are correct.
+Solution: Check for active billing holds or account suspensions. Clear browser cache or try a different browser/device. Reset password if needed. Contact support if unresolved.
+
+Entry 5:
+Issue: How to change notification preferences.
+Description: User wants to customize email, SMS, or push notification settings.
+Solution: Navigate to Account Settings > Notifications. Adjust preferences per category and save changes.
+
+Entry 6:
+Issue: How to delete an account.
+Description: User wants to permanently delete their account and data.
+Solution: Go to Account Settings > Privacy or Account > Delete Account. Follow prompts to confirm identity and deletion. Note data retention policies.
+
+Entry 7:
+Issue: How to manage subscriptions.
+Description: User wants to upgrade, downgrade, or cancel subscriptions.
+Solution: Access 'Billing' in Account Settings. Select your subscription plan and follow options to change or cancel. Changes take effect next billing cycle.
+
+Entry 8:
+Issue: How to update payment method.
+Description: User needs to add or change credit card or payment info.
+Solution: Go to Billing section in Account Settings. Add new payment method and set it as default. Remove old payment methods if desired.
+
+Entry 9:
+Issue: How to enable or disable dark mode.
+Description: User prefers a different app theme.
+Solution: In App Settings or Profile Settings, toggle dark mode on or off as desired.
+
+Entry 10:
+Issue: How to change language preferences.
+Description: User wants to switch the app or site language.
+Solution: Go to Settings > Language. Select preferred language and save. The interface will reload in the chosen language.
+
+Entry 11:
+Issue: Troubleshooting app not loading.
+Description: User opens app but it stays on loading screen.
+Solution: Check internet connection. Restart the app or device. Clear app cache/data. Update to the latest version. Reinstall if necessary.
+
+Entry 12:
+Issue: How to link social media accounts.
+Description: User wants to connect Facebook, Google, or other accounts for login or sharing.
+Solution: Go to Account Settings > Linked Accounts. Select the social platform and follow prompts to authorize connection.
+
+Entry 13:
+Issue: How to manage privacy settings.
+Description: User wants to control what others see on their profile.
+Solution: Navigate to Privacy Settings. Adjust visibility of profile info, posts, and activity feed. Save changes.
+
+Entry 14:
+Issue: How to reset two-factor authentication (2FA).
+Description: User lost access to 2FA device or app.
+Solution: Use backup codes to disable 2FA or contact support for identity verification and reset.
+
+Entry 15:
+Issue: How to update contact email or phone number.
+Description: User wants to change their registered email or phone.
+Solution: Go to Profile Settings > Contact Info. Update email or phone and verify changes via confirmation links or codes.
+
+Entry 16:
+Issue: How to set up account recovery options.
+Description: User wants to add recovery email or phone.
+Solution: Access Security Settings > Recovery Options. Add recovery contact info and verify.
+
+Entry 17:
+Issue: How to view billing history.
+Description: User wants to see past invoices and payments.
+Solution: Go to Billing section > Payment History. Download or view invoices as needed.
+
+Entry 18:
+Issue: How to disable account temporarily.
+Description: User wants to pause their account without deleting it.
+Solution: Navigate to Account Settings > Privacy or Account > Deactivate Account. Follow prompts for temporary suspension.
+
+Entry 19:
+Issue: How to report a bug or app issue.
+Description: User encounters an error or bug in the app.
+Solution: Submit a bug report via support portal including detailed steps to reproduce, screenshots, device info, and app version.
+
+Entry 20:
+Issue: How to change username.
+Description: User wants to update their display or login name.
+Solution: Go to Profile Settings > Username. Enter new username if available and save.
+
+Entry 21:
+Issue: How to manage email subscriptions.
+Description: User wants to opt in or out of newsletters or marketing emails.
+Solution: Access Email Preferences in Account Settings. Toggle subscription options accordingly.
+
+Entry 22:
+Issue: How to sync data across devices.
+Description: User wants their account data consistent on mobile and desktop.
+Solution: Ensure you are logged in on all devices. Enable sync features in App Settings if available.
+
+Entry 23:
+Issue: How to add multiple users or family accounts.
+Description: User wants to add secondary users to their plan.
+Solution: Check if your subscription supports multi-user or family plans. Go to Billing > Manage Users. Add and invite users.
+
+Entry 24:
+Issue: How to clear search or usage history.
+Description: User wants to delete past searches or activity.
+Solution: Navigate to Privacy Settings > Activity or History. Clear or delete as desired.
+
+Entry 25:
+Issue: How to update profile picture.
+Description: User wants to change their avatar or photo.
+Solution: Go to Profile Settings > Profile Picture. Upload new image and save.
+
+Entry 26:
+Issue: How to set up app notifications.
+Description: User wants push notifications enabled or customized.
+Solution: Access App Settings > Notifications. Toggle and customize notification types.
+
+Entry 27:
+Issue: How to export account data.
+Description: User wants a copy of their personal data.
+Solution: Request data export via Account Settings > Privacy > Data Export. Download file when ready.
+
+Entry 28:
+Issue: How to reset app to default settings.
+Description: User wants to restore app settings to default.
+Solution: Go to App Settings > Reset. Confirm reset action.
+
+Entry 29:
+Issue: How to handle account suspension.
+Description: User’s account has been suspended.
+Solution: Review suspension notice for reasons. Contact support to appeal or resolve issues.
+
+Entry 30:
+Issue: How to report abuse or harassment.
+Description: User wants to report inappropriate behavior.
+Solution: Use ‘Report’ feature on the offending content or user profile. Contact support for urgent issues.
+
+Entry 31:
+Issue: How to change time zone settings.
+Description: User wants to update account time zone.
+Solution: Go to Account Settings > Preferences > Time Zone. Select correct zone and save.
+
+Entry 32:
+Issue: How to manage linked devices.
+Description: User wants to view or remove authorized devices.
+Solution: Go to Security Settings > Authorized Devices. Remove any device that is no longer in use.
+
+Entry 33:
+Issue: How to enable auto-login.
+Description: User wants to stay logged in on trusted devices.
+Solution: Enable ‘Remember Me’ or auto-login option at login page. Use cautiously on shared devices.
+
+Entry 34:
+Issue: How to access beta or experimental features.
+Description: User wants to try new features before general release.
+Solution: Join beta programs via Account Settings or Support page. Follow instructions to opt in.
+
+Entry 35:
+Issue: How to provide feedback.
+Description: User wants to send suggestions or comments.
+Solution: Use feedback forms available in app or support portal. Include detailed feedback.
+
+Entry 36:
+Issue: How to manage multiple accounts.
+Description: User has more than one account.
+Solution: Use different browsers or incognito mode to switch. Avoid sharing login details.
+
+Entry 37:
+Issue: How to set privacy for posts.
+Description: User wants to control who sees their posts.
+Solution: Use privacy settings on each post or default settings in Privacy section.
+
+Entry 38:
+Issue: How to manage saved items or favorites.
+Description: User wants to organize saved content.
+Solution: Go to Saved Items or Favorites section. Create folders or tags as supported.
+
+Entry 39:
+Issue: How to update security questions.
+Description: User wants to change security questions and answers.
+Solution: Go to Security Settings > Security Questions. Update and save.
+
+Entry 40:
+Issue: How to unlink social accounts.
+Description: User wants to disconnect linked Facebook or Google accounts.
+Solution: Go to Linked Accounts in Account Settings and remove unwanted connections.
+
+Entry 41:
+Issue: How to use offline mode.
+Description: User wants to access some features without internet.
+Solution: Enable offline mode in App Settings if available. Sync data when online.
+
+Entry 42:
+Issue: How to manage API access.
+Description: Developer user wants to generate or revoke API keys.
+Solution: Go to Developer Settings > API Access. Create, manage, or revoke keys.
+
+Entry 43:
+Issue: How to change default payment currency.
+Description: User wants to update billing currency.
+Solution: Go to Billing Settings. Change currency if supported. Contact support for assistance.
+
+Entry 44:
+Issue: How to update mailing address.
+Description: User wants to update postal address for billing or correspondence.
+Solution: Go to Account Settings > Contact Info > Address. Update and save.
+
+Entry 45:
+Issue: How to customize dashboard or homepage.
+Description: User wants personalized layout or widgets.
+Solution: Use customization options in dashboard settings.
+
+Entry 46:
+Issue: How to report a lost device.
+Description: User lost a device linked to their account.
+Solution: Remove device from authorized devices list. Change passwords. Enable 2FA.
+
+Entry 47:
+Issue: How to clear app cache.
+Description: User wants to free up storage or fix app issues.
+Solution: Clear cache in device settings or app settings.
+
+Entry 48:
+Issue: How to manage language and region settings.
+Description: User wants to adjust regional formats or language.
+Solution: Go to Settings > Language & Region. Choose preferred options.
+
+Entry 49:
+Issue: How to set account inactivity auto-logout.
+Description: User wants automatic logout after inactivity.
+Solution: Configure auto-logout timer in Security or Privacy Settings.
+
+Entry 50:
+Issue: How to update emergency contact information.
+Description: User wants to add or change emergency contact.
+Solution: Go to Profile or Security Settings > Emergency Contacts. Add or update contact info.
+
+ 

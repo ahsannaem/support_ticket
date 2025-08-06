@@ -1,0 +1,50 @@
+Entry 1:
+Issue: Unable to process payment.
+Description: Customer reports that their credit card payment is not going through.
+Solution: ask the customer to Verify that the credit card details are entered correctly in the billing portal. Check if the card has sufficient funds or if it is expired. Contact the bank if necessary. If payment succeeds but access remains restricted, ask the customer to log out and log back in.
+
+Entry 2:
+Issue: Overcharged on subscription.
+Description: Customer claims they were billed more than expected on their monthly subscription.
+Solution: Review the customer's current subscription plan and billing history. If an error is found, ask the customer to apply for refund or billing adjustment. Request the customer provide account ID and transaction details.
+
+Entry 3:
+Issue: Billing hold causing login issues.
+Description: Customer cannot log into their account due to a billing hold.
+Solution: Explain that billing holds occur if payments fail. Instruct the customer to update their payment method and pay any outstanding invoices. Advise waiting 10–15 minutes after payment before attempting to log in again.
+
+Entry 4:
+Issue: How to change subscription plan.
+Description: Customer wants to upgrade or downgrade their subscription.
+Solution: Guide the customer to go to Account Settings > Billing, select a new subscription plan, and save changes. Inform them that changes take effect at the next billing cycle. Suggest clearing browser cache or trying a different browser if issues arise.
+
+Entry 5:
+Issue: Payment declined with no clear error.
+Description: Customer's payment is declined, but no specific error message is shown.
+Solution: Recommend verifying card details and contacting the bank to check for any holds or blocks. Suggest trying an alternative payment method. If the issue persists, escalate to billing support.
+
+Entry 6:
+Issue: Refund request for accidental purchase.
+Description: Customer accidentally purchased the wrong subscription tier and wants a refund.
+Solution: Confirm the purchase date and plan details. Check refund eligibility according to company policy. Process refund if applicable and inform the customer of the timeline for the refund.
+
+Entry 7:
+Issue: Invoice not received.
+Description: Customer reports they have not received their monthly invoice via email.
+Solution: Verify the email address associated with the account. Ask the customer to check spam/junk folders. Offer to resend the invoice manually from the billing system.
+
+Entry 8:
+Issue: Multiple charges for a single billing period.
+Description: Customer was charged multiple times for the same subscription period.
+Solution: Review billing logs for duplicate charges. If confirmed, initiate a refund for duplicate amounts. Inform the customer and provide updated billing statements.
+
+Entry 9:
+Issue: Need to update billing address.
+Description: Customer wants to change their billing address details.
+Solution: Instruct the customer to go to Account Settings > Billing and update the billing address. Confirm the changes have been saved successfully.
+
+Entry 10:
+Issue: How to add a new payment method.
+Description: Customer wants to add a new credit card or payment method.
+Solution: Guide the customer to Account Settings > Billing > Payment Methods, then add and save the new payment method securely.
+

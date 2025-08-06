@@ -1,0 +1,118 @@
+# Support Ticket
+This project implements a LangGraph api for a support ticket agent, utilizing a pgvector database for vector storage and retrieval. The application runs in Docker containers, exposing a secure API at http://127.0.0.1:2024 and integrating with LangSmith for the Studio UI.
+
+
+## Project Structure
+
+```
+graph/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── .env
+├── src/
+│   ├── agent/
+│   │   ├── __init__.py
+│   │   ├── graph.py
+│   │   ├── (other Python files)
+├── main.py  # or other entry point
+├── (other files, e.g., dataset directory)
+```
+
+- **`src/agent`**: Contains the `agent` package with the LangGraph definition (`graph.py`).
+- **Dockerfile**: Builds the Python 3.13.5 environment with dependencies.
+- **docker-compose.yml**: Configures `langgraph` and `pgvector` services.
+- **.env**: Stores environment variables for LangSmith and Google API.
+- **requirements.txt**: Lists Python dependencies.
+
+## Prerequisites
+
+- **Docker**: Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Windows, Mac, or Linux.
+- **Python 3.13.5** (optional, for local development): Install via [python.org](https://www.python.org/downloads/release/python-3135/).
+- **Git**: To clone the repository.
+- **PowerShell** or **Command Prompt** (Windows) or **Terminal** (Mac/Linux) for running commands.
+- A valid **LangSmith project** and **Google API key** for embeddings.
+
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+Clone the project to your local machine:
+
+```bash
+git clone <repository-url>
+cd graph
+```
+
+### 2. Configure Environment Variables
+
+Create a `.env` file in the project root (`graph/`) with the following:
+
+```plaintext
+LANGSMITH_PROJECT=support_ticket_agent
+GOOGLE_API_KEY=<your-google-api-key>
+```
+
+- Replace `<your-google-api-key>` with your Google API key for embeddings.
+- Ensure `LANGSMITH_PROJECT` matches your LangSmith project name.
+
+### 3. Verify Project Files
+
+Ensure the following files are present:
+- Dockerfile
+- Docker-compose.yaml
+- .env
+- requirements.txt
+
+### 4. Build and Run the Application
+
+Build and start the Docker containers:
+
+```bash
+docker-compose up --build
+```
+
+### 5. Access the Application
+
+- **API**: `http://127.0.0.1:2024`
+### 6. Stop the Application
+
+Stop the containers:
+```bash
+docker-compose down
+```
+
+Reset the database (if needed):
+```bash
+docker-compose down -v
+```
+
+## Local Development (Optional)
+
+To run locally without Docker:
+
+1. Activate virtual environment:
+   ```bash
+   python -m venv env
+   source env/Scripts/activate  # Windows
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the server:
+   ```bash
+   langgraph dev --allow-blocking
+   ```
+
+4. Access the API and Studio UI as above.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
