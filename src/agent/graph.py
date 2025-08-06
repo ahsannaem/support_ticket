@@ -113,19 +113,22 @@ async def review_draft(state: State) -> State:
     llm = get_llm()
 
     latest_draft = state["draft"][-1]
+    
 
     prompt = PromptTemplate.from_template(REVIEW_DRAFT_PROMPT)
-    prompt_value = prompt.invoke({"latest_draft": latest_draft})
+    prompt_value = prompt.invoke({"latest_draft": latest_draft, "subject": state["subject"], "description": state["description"]})
 
     structured_llm = llm.with_structured_output(ReviewResult)
     response = structured_llm.invoke(prompt_value)
 
-    print(f"Review result: {response.status}, Feedback: {response.feedback}")
+    print(f"Review result: {response.status}, Feedback: {response.feedback}, Keywords: {response.retrive_improve}")
 
     if response.status == "rejected" and response.feedback:
         state["feedback"].append(response.feedback)
         state["review_count"] = state.get("review_count", 0) + 1
         state['status'] = response.status
+        state['retrive_improve'] = response.retrive_improve or []
+        
     else:
         state["status"] = "approved"
         state["feedback"].append("Draft approved by reviewer.")
@@ -145,7 +148,6 @@ def dump_state_to_csv(state: State) -> State:
         "category": state["category"],
         "drafts": "\n---\n".join(state["draft"]),
         "feedbacks": "\n---\n".join(state["feedback"]),
-        "review_count": state["review_count"]
     }
 
     df = pd.DataFrame([data])
