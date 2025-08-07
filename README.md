@@ -105,7 +105,7 @@ To run locally without Docker:
    ```bash
    pip install -r requirements.txt
    ```
-  Note: You can skip step 3 and 4 if you already have some instance of vector database already running.
+  Note: You can skip step 3 and 4 if you already have some instance of postgres vector database already running.
 3. Spin up PGvector container
   ```bash
     docker run --name pgvector-container -e POSTGRES_USER=langchain -e POSTGRES_PASSWORD=langchain -e POSTGRES_DB=langchain -p 6024:5432 -d pgvector/pgvector:pg16
@@ -121,6 +121,14 @@ To run locally without Docker:
    ```
 
 6. Access the API and Studio UI as above.
+## Design Desicions
+1. Used Async programming for better efficiency although this repo has some third party blocking apis thererfore we have to allow blocking code in dev server which is very bad for speed and efficiency.
+2. Use of pyadantic models and llm wrappers for getting structured output from llms.
+3. Modular code and robust error handling.
+4. Used shared state graph so that all the nodes are bound to read and write from single shared state and data remain condensed.
+5. Intead of using multiple RAG nodes (one for each catagory ) I used filtered quires for filtering retrival docs based on catagory.
+6. Before extracting data from vector store i refreshed all the data inside of it so that the llm remain grounded in latest data. (Although this presents a computation overhead but our dataset in this case is very small so it doesn't matter much.)
+7. Because of small size of document instances in the dataset I have skipped splitting and merging of documents.
 
 ## Contributing
 

@@ -432,3 +432,661 @@ To ensure the security of your account and investigate this further, we need to 
 After verifying your identity, we will investigate the suspicious activity and guide you through the necessary steps to secure your account.","The ticket is about hacking, which requires human review according to company policy.
 ---
 Response addresses a potential security issue (account hack). These types of tickets require human review to ensure proper handling and security protocols are followed."
+2025-08-07T01:21:11.910575,Account hacked,I have detected an unknown loging and my account is hacked help me recover it.,security,"Subject: Re: Account hacked
+
+We understand you're concerned about unauthorized access to your account.
+
+To help you secure your account, we recommend immediately changing your password to a strong, unique one. You can do this by visiting [link to password reset page].
+
+Next, please review your account activity for any unfamiliar transactions or changes to your profile.
+
+If you notice anything suspicious or are unable to regain control of your account, please provide more details about the unknown login (e.g., IP address, location, date/time) so we can investigate further.
+---
+We understand you're concerned about unauthorized access to your account. To help you recover your account and secure it, we need to verify your identity.
+
+Please follow the account recovery steps outlined on our help page at [link to help page]. This will guide you through verifying your identity and regaining access.
+
+If you've already tried these steps or are unable to complete them, please provide any additional details about the unauthorized login you detected, such as the date, time, and location if available.","Response should be rejected when the ticket is about hacking.
+---
+Response addresses a hacking issue, which requires human review according to company policy."
+2025-08-07T10:37:48.082438,account hacked,I have detected suspicous login attempt into my account someone hacked it.,security,"Subject: Re: account hacked
+
+We understand you've detected suspicious login attempts on your account. We take account security very seriously.
+
+First, please ensure you've changed your password to a strong, unique one. Next, if you have set up recovery options, please check them to ensure they are accurate.
+
+If you notice any unauthorized changes or suspect your account has been compromised, please review our account recovery options. If you are unable to recover your account through these options, please let us know, and we can guide you through the next steps to verify your identity and investigate the potential breach.
+---
+Subject: Re: account hacked
+
+We understand you've detected suspicious login attempts on your account. We take account security very seriously.
+
+To help you secure your account, please first ensure you've changed your password to a strong, unique one. Next, enable two-factor authentication in your account settings for added protection.
+
+If you notice any unauthorized changes or activity, please review your account activity logs. If anything seems amiss, it's crucial to investigate the breach.
+
+If you are unable to access your account, please contact us directly.","Response contains the topic of hacking, which requires human review.
+---
+null"
+2025-08-07T10:56:02.247367,"Suspected account hack
+", I think my account was compromised because I saw unrecognized login attempts from another country. I need immediate assistance to secure my account and investigate this issue.,security,"Hello,
+
+I understand you're having trouble logging in due to an ""Invalid credentials"" error. This often happens when our system detects unusual activity and temporarily locks the account to protect it.
+
+Typically, the account will automatically unlock after 30 minutes. If you're still unable to log in after this time, please try resetting your password using the ""Forgot Password"" option on the login page. You'll be guided through a verification process using your email or phone number.
+
+If the issue persists after trying these steps, please let us know.
+---
+Subject: Re: Suspected account hack
+
+Dear [User Name],
+
+Thank you for reaching out to us. I understand you're concerned about unauthorized login attempts on your account.
+
+To help secure your account, I recommend immediately changing your password to a strong, unique one. You should also enable two-factor authentication if you haven't already.
+
+To investigate the unrecognized login attempts, could you please provide more details, such as the specific dates and times you noticed them?
+
+We're here to help you through this process.
+---
+Subject: Re: Suspected account hack
+
+Dear User,
+
+Thank you for reaching out to us. We understand you're concerned about unauthorized login attempts on your account.
+
+To help secure your account and investigate this issue, we need to verify your identity. Please provide any information that will help verify your identity.
+
+We will investigate this further once we have confirmed your identity.","Draft approved by reviewer.
+---
+The ticket is about hacking, which requires human review according to company policy.
+---
+The ticket is about hacking, which requires human review according to company policy."
+2025-08-07T10:57:29.774063,accunt hack, I think my account was compromised because I saw unrecognized login attempts from another country. I need immediate assistance to secure my account and investigate this issue.,security,"Subject: Re: accunt hack
+
+Dear User,
+
+Thank you for reaching out to us. I understand you're concerned about unauthorized login attempts on your account.
+
+To help secure your account, I recommend immediately changing your password to a strong, unique one. You should also enable two-factor authentication if you haven't already.
+
+To investigate the unrecognized login attempts and ensure the security of your account, please provide any additional details you may have, such as the date and time of the suspicious activity.
+
+We're here to help you through this process.
+---
+Subject: Re: accunt hack
+
+We understand you're concerned about unauthorized login attempts on your account. We're here to help you secure it.
+
+First, please change your password immediately to a strong, unique one. Next, enable two-factor authentication (2FA) in your account settings for added security.
+
+To investigate the unrecognized login attempts, we need to verify your identity. Please provide any information about the unusual activity, such as the date, time, and location of the attempts.
+
+If you notice any unauthorized changes or suspect any data breach, please let us know immediately.","Response should be rejected since the ticket is about hacking.
+---
+The ticket is about hacking, which requires human review according to company policy."
+2025-08-07T11:29:23.710048,tell me a joke,can you tell a funny joke im very sad so make me smile,general,"Subject: Re: dragon attack
+
+Hi there,
+
+We understand you're having trouble accessing your billing history and that your invoice is missing. While we're sorry to hear about the ""dragon attack,"" we want to help you get your billing information back on track!
+
+To investigate this further, could you please provide us with your account username or email address? This will allow us to locate your account and review your billing history for any discrepancies.
+
+Once we have this information, we can look into the missing invoice and ensure your billing history is accurate.
+
+Thanks,
+The Prnology Team
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+Thanks for reaching out! I hope you're having a great day.
+
+Regarding your request to change your account name to ""dragon attack,"" you can easily do this yourself. Simply go to your Profile Settings and look for the Username section. There, you can enter ""dragon attack"" (or another name if that one isn't available) and save the changes.
+
+I hope this helps!
+---
+Hi there,
+
+I understand you're looking for a joke to brighten your day. While I'm designed to provide technical support, I can offer some troubleshooting steps that might help if you're experiencing issues with our app.
+
+If the app is stuck on a loading screen, please try the following:
+
+*   Ensure you have a stable internet connection.
+*   Restart the app and/or your device.
+*   Clear the app's cache and data (you can usually find this in your device's settings under ""Apps"").
+*   Make sure you're using the latest version of the app.
+*   As a last resort, try reinstalling the app.
+
+I hope this helps!","An error occurred during the review process.{e}
+---
+An error occurred while dumping the ticket to CSV.
+---
+Draft approved by reviewer.
+---
+Response contains humor and does not directly address the user's request for a joke. While it attempts to pivot to troubleshooting, it's not appropriate for the request."
+2025-08-07T11:30:31.602214,billing issue ,look i was charged 50 dollars extra but help me in a firendly humours way,billing,"Subject: Regarding your billing concern
+
+Hi there,
+
+Thanks for reaching out! I understand you were charged an extra $50 and are looking for some help.
+
+To investigate this further, could you please provide your account ID and the transaction details (date and amount charged)? This will help me quickly review your subscription plan and billing history to identify the cause of the extra charge.
+
+Once I have this information, I can guide you through the process of applying for a refund or billing adjustment if an error has occurred.
+
+Thanks for your patience!",An error occurred during the review process.{e}
+2025-08-07T11:31:48.517390,billing issue ,I was charged 50 dollars extra for my subscription help me wih little humor as life is shirt already,billing,"Subject: Regarding your billing concern
+
+Hi there,
+
+Thanks for reaching out! I understand you were charged an extra $50 and are looking for some help.
+
+To investigate this further, could you please provide your account ID and the transaction details (date and amount charged)? This will help me quickly review your subscription plan and billing history to identify the cause of the extra charge.
+
+Once I have this information, I can guide you through the process of applying for a refund or billing adjustment if an error has occurred.
+
+Thanks for your patience!
+---
+Subject: Re: billing issue
+
+Hi there,
+
+We understand your frustration regarding the unexpected $50 charge on your subscription. We're here to help sort this out!
+
+To investigate this further, could you please provide your account ID and the transaction details (date and amount charged)? This will allow us to quickly review your subscription plan and billing history.
+
+Once we have this information, we can determine the cause of the extra charge and guide you through the process of applying for a refund or billing adjustment if necessary.
+
+Thanks for your patience!","An error occurred during the review process.{e}
+---
+Response contains humor ('life is shirt already') in the ticket description. The draft should not contain any humor and should maintain a professional tone."
+2025-08-07T11:33:32.191967,billing issue,I was charged 50 dollars extra for my account can you help me refund it add a little touch of humor,billing,"Subject: Re: billing issue
+
+Hi there,
+
+Thanks for reaching out! I understand you were charged an extra $50 on your account.
+
+To help me investigate this further, could you please provide your account ID and the transaction details (date and amount)? This will allow me to review your subscription plan and billing history to identify the discrepancy.
+
+Once I have this information, I can guide you through the process of applying for a refund or billing adjustment if an error is confirmed.
+
+Thanks for your patience!
+---
+Subject: Re: billing issue
+
+Hi there,
+
+Thanks for reaching out! I understand you were charged an extra $50 on your account.
+
+To help me investigate this further, could you please provide your account ID and the transaction details (date and amount)? This will allow me to review your subscription plan and billing history to identify the discrepancy.
+
+Once I have this information, I can guide you through the process of requesting a refund or billing adjustment if an error is confirmed.
+
+Thanks for your patience!","An error occurred during the review process.{e}
+---
+Response is polite and helpful, but it doesn't follow a proper letter-like structure with a formal closing from the support team. The ticket description also contains a request for humor, which should be avoided in the response."
+2025-08-07T12:00:54.588610,dragon attack,a dragon ate my invoice now billing hirtoy is gone lol,billing,"Hi there!
+
+I'm sorry to hear a dragon ate your invoice and your billing history is gone! I can certainly understand how frustrating that must be.
+
+Let's try to get your billing history back on track. First, could you please double-check the email address associated with your account to make sure it's correct? Also, please check your spam or junk mail folders, just in case the invoice ended up there.
+
+If you still can't find it, I can manually resend the latest invoice. Let me know if you need me to do that!
+---
+Hi there!
+
+I'm sorry to hear a dragon ate your invoice – that sounds like quite the adventure! Let's see if we can get your billing history back on track.
+
+First, could you please double-check the email address associated with your account to make sure it's correct? Also, please take a look in your spam or junk mail folders, just in case the invoice ended up there.
+
+If you still can't find it, let me know, and I can manually resend the latest invoice to you.","An error occurred during the review process.{e}
+---
+Response contains humor ('dragon ate your invoice', 'quite the adventure', 'lol'). Use a professional tone per company policy."
+2025-08-07T12:03:10.314990,dragon attack,"a dragon ate my invoice now my billing histoy is gone haha lol
+",billing,"Hi there!
+
+I'm sorry to hear a dragon ate your invoice and your billing history is gone! I can certainly understand how frustrating that must be.
+
+Let's try to get your billing history back on track. First, could you please double-check the email address associated with your account to make sure it's correct? Also, please check your spam or junk mail folders, just in case the invoice ended up there.
+
+If you still can't find it, I can manually resend the latest invoice. Let me know if you need me to do that!
+---
+Hi there!
+
+I'm sorry to hear a dragon ate your invoice – that sounds like quite the adventure! Let's see if we can get your billing history back on track.
+
+First, could you please double-check the email address associated with your account to make sure it's correct? Also, please take a look in your spam or junk mail folders, just in case the invoice ended up there.
+
+If you still can't find it, let me know, and I can manually resend the latest invoice to you.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I understand you're having trouble accessing your billing history and that your invoice seems to have disappeared. I can certainly help you with that!
+
+First, could you please double-check the email address associated with your account to ensure it's correct? Also, please check your spam or junk mail folders, as the invoice might have landed there.
+
+If you still can't find it, I'd be happy to resend your latest invoice. Just let me know, and I'll get that sorted out for you right away.
+
+I hope we can resolve this quickly!","An error occurred during the review process.{e}
+---
+Response contains humor ('dragon ate your invoice', 'quite the adventure', 'lol'). Use a professional tone per company policy.
+---
+Response contains humor ('haha lol'). Use a professional tone per company policy."
+2025-08-07T12:06:01.215153,dragon attack ,a dragon ate my invoice now my billing history is gone lol,billing,"Hi there,
+
+I understand a dragon ate your invoice, and now your billing history is missing. I can imagine how frustrating that must be!
+
+To help me investigate what happened to your billing history, could you please provide more details such as your account name or email address? This will allow me to locate your account and review your billing information.
+
+Once I have this information, I can check for any missing invoices or discrepancies in your billing history.
+---
+Hi there,
+
+I understand a dragon ate your invoice, and now your billing history is missing. I can imagine how frustrating that must be!
+
+To help me investigate, could you please provide more details, such as your account username or email address? Also, can you clarify what you mean by ""billing history is gone""? Are you unable to see any past invoices, or is something else happening?
+
+Once I have this information, I can look into your account and help restore your billing history.","An error occurred during the review process.{e}
+---
+Response contains humor ('dragon ate your invoice', 'lol'). Use a professional tone per company policy. The response also asks for sensitive information (username or email address)."
+2025-08-07T12:09:21.835313,dragon attack,A dragon ate my invoice now my billing history is gone lol,billing,"Hi there,
+
+I'm sorry to hear about the dragon-related invoice incident! While I can't help with the dragon, I can definitely look into your billing history.
+
+It sounds like you might be seeing some unexpected charges. To investigate this, could you please provide more details, such as the dates and amounts of the charges you're concerned about?
+
+Once I have that information, I can review your account for any duplicate billings and take steps to correct them.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I'm sorry to hear about the dragon-related invoice incident! While I can't help with the dragon, I can definitely look into your billing history.
+
+It sounds like you might be seeing some unexpected charges. To best assist you, could you please provide more details about what you're seeing in your billing history? Specifically, please let me know which dates or invoice numbers seem incorrect.
+
+Once I have that information, I can investigate further and ensure your account is accurate.","An error occurred during the review process.'feedback'
+---
+Response contains humor ('lol'). Use a professional tone per company policy."
+2025-08-07T12:12:18.985562,dragon attack,A dragon ate my invoice now billing history is gone,billing,"Subject: Re: dragon attack
+
+Hi there,
+
+I understand that a dragon ate your invoice and now your billing history is gone. I can only imagine how frustrating that must be!
+
+To help you with your billing history, could you please provide more details such as your account name or any recent transaction details? This will help me locate your account and investigate the missing billing information.
+
+Based on the information, it sounds like you may have been charged multiple times for the same billing period. I can review your billing logs for any duplicate charges. If confirmed, I will initiate a refund for the duplicate amounts and provide you with updated billing statements.
+
+Thank you for your patience!
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I understand that you are unable to see your billing history. I can only imagine the frustration of having a dragon eat your invoice!
+
+To help you with this, I'll need a bit more information. Could you please provide your account details or any previous invoice numbers you might have?
+
+Once I have this information, I can investigate your billing history and ensure everything is accurate. If there are any discrepancies, I'll be sure to resolve them promptly.
+
+Thanks for your patience!","An error occurred during the review process.'feedback'
+---
+Response contains humor ('I can only imagine the frustration of having a dragon eat your invoice!'). Use a professional tone per company policy."
+2025-08-07T12:19:05.408397,dragon attack,a dragon ate my invoice now my billing history is gone,billing,"Hi there,
+
+I'm sorry to hear about the trouble you're experiencing with your billing history and the missing invoice. I can understand how frustrating that must be!
+
+To help me investigate this further, could you please provide more details about the missing invoice and the billing period in question? Knowing the specific dates or subscription details will allow me to look into your account and identify any potential issues, such as multiple charges for the same period.
+
+Once I have this information, I can review the billing logs for any discrepancies and work towards a resolution.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I'm sorry to hear about the ""dragon attack"" and the trouble with your invoice and billing history! I understand how frustrating it can be when important information seems to disappear.
+
+To help me investigate what happened to your billing history, could you please provide a bit more detail? Specifically, could you let me know the account name or email address associated with your subscription?
+
+Once I have that, I can look into your billing history and see if I can recover your invoice. If you are seeing multiple charges for the same period, I can investigate that as well.
+
+Thanks for your patience!
+---
+Hi there,
+
+I'm sorry to hear about the dragon-related invoice incident and the trouble with your billing history! I understand it can be frustrating when you can't access your billing information.
+
+Based on your description, it sounds like you might be seeing multiple charges for the same billing period. To investigate this, could you please provide more details, such as the dates and amounts of the charges you're seeing?
+
+Once I have this information, I can look into our billing logs to check for any duplicate charges and help resolve this for you.","An error occurred during the review process.'feedback'
+---
+Draft approved by reviewer.
+---
+The response is good, but it needs to avoid using the phrase 'I'm sorry to hear about the dragon-related invoice incident'."
+2025-08-07T12:29:12.235115,dragon attack,A dragon ate my invoice now billing history is gone,billing,"Hi there,
+
+I'm sorry to hear about the trouble you're experiencing with your billing history and the missing invoice. I can understand how frustrating that must be!
+
+To help me investigate this further, could you please provide more details about the missing invoice and the billing period in question? Knowing the specific dates or subscription details will allow me to look into your account and identify any potential issues, such as multiple charges for the same period.
+
+Once I have this information, I can review the billing logs for any discrepancies and work towards a resolution.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I'm sorry to hear about the ""dragon attack"" and the trouble with your invoice and billing history! I understand how frustrating it can be when important information seems to disappear.
+
+To help me investigate what happened to your billing history, could you please provide a bit more detail? Specifically, could you let me know the account name or email address associated with your subscription?
+
+Once I have that, I can look into your billing history and see if I can recover your invoice. If you are seeing multiple charges for the same period, I can investigate that as well.
+
+Thanks for your patience!
+---
+Hi there,
+
+I'm sorry to hear about the dragon-related invoice incident and the trouble with your billing history! I understand it can be frustrating when you can't access your billing information.
+
+Based on your description, it sounds like you might be seeing multiple charges for the same billing period. To investigate this, could you please provide more details, such as the dates and amounts of the charges you're seeing?
+
+Once I have this information, I can look into our billing logs to check for any duplicate charges and help resolve this for you.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I understand you're having trouble accessing your billing history.
+
+To help you with this, could you please double-check the email address associated with your account? Also, please check your spam or junk folders, as the invoice might have landed there.
+
+I can resend your most recent invoice. Would you like me to do that?
+
+If you still can't find your billing history, please let me know, and I'll gladly assist you further.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+Thanks for reaching out! I understand you're having trouble accessing your billing history and believe your invoice is missing.
+
+To help resolve this, could you please double-check the email address associated with your account? Also, please take a look in your spam or junk folders, as the invoice might have landed there.
+
+I can manually resend your latest invoice from our billing system. Would you like me to do that?
+
+Let me know if you have any other questions!","An error occurred during the review process.'feedback'
+---
+Draft approved by reviewer.
+---
+The response is good, but it needs to avoid using the phrase 'I'm sorry to hear about the dragon-related invoice incident'.
+---
+Draft approved by reviewer.
+---
+The draft is mostly good, but it offers to manually resend the invoice, which could be a sensitive action depending on the company's policy. It's better to guide the user on how to access their billing history themselves."
+2025-08-07T12:33:09.688236,dragon attack,a dragon ate my invoice now my billing histoy is gone lol,billing,"Hi there,
+
+I understand you're missing your invoice and, while a dragon attack sounds pretty epic, it's definitely frustrating!
+
+Let's get that invoice back to you. First, could you please double-check your spam or junk mail folders? Sometimes our invoices take a detour. Also, please confirm the email address associated with your account so I can verify it's correct.
+
+Once I have that information, I'd be happy to resend the invoice to you manually.
+---
+Hi there,
+
+I understand you're missing your invoice and, while a dragon attack sounds pretty epic, it's definitely frustrating!
+
+Let's get that invoice back to you. First, could you please double-check your spam or junk mail folders? Sometimes our invoices take a detour. Also, please confirm the email address associated with your account so I can verify it's correct.
+
+Once I have that information, I'd be happy to resend the invoice to you manually.
+---
+Subject: Re: dragon attack
+
+Hi there,
+
+I understand you're missing your invoice and that a dragon may or may not be involved. Let's get that sorted out for you!
+
+First, could you please double-check your spam or junk mail folders? Sometimes, our invoices take a detour and end up there.
+
+If it's not there, I can resend the invoice. To ensure it reaches you, please confirm the email address associated with your account.
+
+I hope we can find your invoice soon!","An error occurred during the review process.'feedback'
+---
+Response contains humor ('dragon attack sounds pretty epic') and casual language ('take a detour'). Use a professional tone per company policy.
+---
+The response contains humor ('dragon may or may not be involved') and a slightly casual tone ('Let's get that sorted out for you!'). While generally helpful, it could be more professional and direct. The phrase 'I hope we can find your invoice soon!' is also a bit too informal."
+2025-08-07T12:35:11.086636,dragon attack,a dragon ate my invoice now my billing history is gone haha lol,billing,"Hi there,
+
+I understand a dragon ate your invoice, and now your billing history is missing. I can only imagine the frustration that must be causing!
+
+To help you with this, I need a little more information. Could you please confirm your account details and the specific invoice number or date you're referring to?
+
+Once I have these details, I can investigate your billing history and ensure everything is accurate. If there are any discrepancies, I'll be sure to resolve them promptly.
+
+Thanks for your patience!
+---
+Hi there,
+
+I'm sorry to hear about the trouble you're experiencing with your billing history! I understand that a dragon ate your invoice and now your billing history is gone. I can only imagine how frustrating that must be.
+
+To help me investigate this further, could you please provide more details about what you're seeing? Specifically, what do you mean by ""billing history is gone""? Are you unable to access your invoices, or are you seeing incorrect charges?
+
+Once I have a better understanding of the issue, I can guide you to the appropriate steps to resolve it.
+---
+Hi there,
+
+I understand you're having trouble accessing your billing history and that your invoice is missing. I can only imagine how frustrating that must be.
+
+To help resolve this, could you please double-check the email address associated with your account? Also, please check your spam or junk folders, as the invoice might have landed there.
+
+I'm happy to resend your latest invoice. If you still can't find your billing history after these steps, please let me know, and I'll gladly assist you further.","An error occurred during the review process.'feedback'
+---
+The response contains humor and sarcasm ('I can only imagine how frustrating that must be' after a clearly humorous statement about a dragon eating an invoice). The tone should be professional and direct, focusing on the actual issue of missing billing history without engaging in the user's humorous narrative. The response also doesn't provide any immediate actionable steps.
+---
+The response is generally good, but it could be more concise. While empathetic, the phrase ""I can only imagine how frustrating that must be"" can be removed to shorten the response. Also, offering to resend the invoice is a sensitive action that should be avoided; instead, guide the user on how to access it themselves."
+2025-08-07T12:55:35.014855,hacked account ,My account is hacked recover it,security,"Subject: Regarding Your Account Security
+
+Hi there,
+
+I understand your account may have been compromised, and I'm here to help.
+
+To start the recovery process, please verify your identity by providing any information that can help us confirm you are the owner of this account.
+
+Once your identity is verified, we can explore available backup and recovery options. If possible, we'll work to restore your account and investigate the potential breach to prevent future issues.
+
+Let me know if you have any questions.
+---
+Subject: Regarding your hacked account
+
+Hi there,
+
+I understand your account may have been compromised, and I'm here to help.
+
+To start the recovery process, I need to verify your identity. Please provide any information that will help to verify your identity.
+
+Once your identity is verified, I will check if there are any backup or recovery options available to restore your account. I will also investigate the potential breach to prevent future incidents.
+
+I'm committed to helping you regain access to your account as quickly as possible.","An error occurred during the review process.'feedback'
+---
+The ticket is about a hacked account, which requires human review according to company policy. The draft should be rejected."
+2025-08-07T12:56:10.558049,unable to verify email,"Verification email is not received in email
+",technical,"Subject: Regarding Your Account Security
+
+Hi there,
+
+I understand your account may have been compromised, and I'm here to help.
+
+To start the recovery process, please verify your identity by providing any information that can help us confirm you are the owner of this account.
+
+Once your identity is verified, we can explore available backup and recovery options. If possible, we'll work to restore your account and investigate the potential breach to prevent future issues.
+
+Let me know if you have any questions.
+---
+Subject: Regarding your hacked account
+
+Hi there,
+
+I understand your account may have been compromised, and I'm here to help.
+
+To start the recovery process, I need to verify your identity. Please provide any information that will help to verify your identity.
+
+Once your identity is verified, I will check if there are any backup or recovery options available to restore your account. I will also investigate the potential breach to prevent future incidents.
+
+I'm committed to helping you regain access to your account as quickly as possible.
+---
+Hi there,
+
+I understand you're having trouble receiving the email verification. I know how frustrating that can be!
+
+First, please double-check that the email address you entered is correct. Also, take a peek in your spam or junk mail folders, just in case it landed there.
+
+If you still haven't received it, let's try resending the verification email. You can do this by [explain steps to resend verification email].
+
+If the issue persists after these steps, it might indicate a more complex problem. Please reach out to our support team at support@company.com, and they'll be happy to investigate further!","An error occurred during the review process.'feedback'
+---
+The ticket is about a hacked account, which requires human review according to company policy. The draft should be rejected.
+---
+The response is generally good, but it could be more concise. The phrase ""I know how frustrating that can be!"" can be removed to make the response more direct. Also, replace [explain steps to resend verification email] with actual steps."
+2025-08-07T13:00:01.455941,hacking attempt,my account is hacked recover it for me,security,"Hi there,
+
+I understand you're having trouble receiving the email verification. I know how frustrating that can be!
+
+First, please double-check that the email address you entered is correct. Also, take a look in your spam or junk mail folders, as the email might have ended up there.
+
+If you still haven't received it, try requesting the verification email again. If the issue persists, there might be a problem with our email server. Please try again in sometime.
+
+If you need further assistance, feel free to reach out to our support team at support@company.com.
+---
+Subject: Regarding your email verification
+
+Hi there,
+
+Thanks for reaching out! I understand you're having trouble receiving the email verification.
+
+First, could you double-check that the email address you entered is correct? It's easy to make a small typo! Also, please take a look in your spam or junk mail folders, as the verification email might have ended up there.
+
+I've gone ahead and resent the verification email to the address we have on file. If you still don't see it after a few minutes, let me know, and we can investigate further.
+---
+Subject: Regarding Your Account Security
+
+Hi there,
+
+I understand you're concerned about a potential hacking attempt on your account. I know that can be really stressful, and I want to help you secure your account right away.
+
+First, please reset your password immediately to something strong and unique.
+
+If you're unable to reset your password or notice any other suspicious activity after changing your password, please reach out to our support team at support@company.com. They have specialized tools to investigate and help you regain full control of your account.
+
+We're here to help!","An error occurred during the review process.'feedback'
+---
+Draft approved by reviewer.
+---
+The ticket explicitly mentions a hacking attempt. According to company policy, such tickets should be rejected for human review."
+2025-08-07T13:01:12.061708,"Suspected account hack
+"," I think my account was compromised because I saw unrecognized login attempts from another country. I need immediate assistance to secure my account and investigate this issue.
+
+",security,"Subject: Regarding your Account Security
+
+Hi there,
+
+I understand your concern about the unrecognized login attempts on your account. I know how unsettling that can be!
+
+To help secure your account, I recommend immediately changing your password to a strong, unique one. You can also enable two-factor authentication in your account settings for added protection.
+
+Regarding the suspicious activity, please check your account for any unauthorized changes to your profile information or connected accounts. If you notice anything unusual, please document it.
+
+If you need further assistance or suspect unauthorized changes, please reach out to our support team at support@company.com, and they will be able to investigate this further.
+
+Thanks,
+---
+Subject: Regarding your Account Security
+
+Hi there,
+
+I understand your concern about the unrecognized login attempts on your account. I know how unsettling that can be!
+
+To ensure your account's security, I recommend immediately changing your password to a strong, unique one. You can also review your account activity for any unfamiliar changes.
+
+For a thorough investigation and to explore recovery options, please reach out to our support team at support@company.com. They have the tools to verify your identity and help restore your account if necessary.
+
+We're here to help you through this!","An error occurred during the review process.'feedback'
+---
+The ticket explicitly mentions a potential account hack. As per policy, such tickets should be rejected to ensure human review."
+2025-08-07T13:05:26.326667,"Suspected account hack
+","I think my account was compromised because I saw unrecognized login attempts from another country. I need immediate assistance to secure my account and investigate this issue.
+
+",security,"Subject: Regarding your Account Security
+
+Hi there,
+
+I understand you're concerned about unauthorized login attempts on your account. I know how unsettling that can be!
+
+To help secure your account, I recommend immediately changing your password to a strong, unique one. You can also enable two-factor authentication in your account settings for an extra layer of security.
+
+Regarding the unrecognized login attempts, please provide any specific details you have (IP address, date, time) so we can investigate this further.
+
+If you have any trouble with the above steps, please don't hesitate to reach out.
+---
+Subject: Regarding your Account Security
+
+Hi there,
+
+I understand you're concerned about unauthorized login attempts on your account. I know how unsettling that can be!
+
+To help secure your account, I recommend immediately changing your password to a strong, unique one. You can also review your account activity for any unfamiliar changes.
+
+If you notice any unauthorized changes or suspect your account has been compromised, please reach out to our support team directly at support@company.com. They have the tools to investigate this further and help restore your account if necessary.
+
+We're here to help!","An error occurred during the review process.'feedback'
+---
+The draft addresses the user's concern about a potential account hack with a professional tone and provides actionable steps. However, since the ticket explicitly mentions hacking, it should be rejected for human review as per company policy."
+2025-08-07T14:58:28.265745,hacking ,my account is hacked recover it,security,"Subject: Regarding your account
+
+Hi there,
+
+I understand you're concerned about unauthorized access to your account. I know how upsetting that can be!
+
+To help you recover your account, please verify your identity by providing [Specific verification details, e.g., account creation date, last password used, etc.]. Once we confirm your identity, we'll explore available backup and recovery options to restore your account. We will also investigate the potential breach to prevent future incidents.
+
+If you have any trouble with these steps or need further assistance, please don't hesitate to reach out.
+---
+Subject: Regarding your account
+
+Hi there,
+
+I understand you're concerned about your account and believe it may have been compromised. I know that must be frustrating, and I'm here to help.
+
+To start the recovery process, please verify your identity by [mention specific steps or information needed for verification, e.g., providing your registered email address and answering security questions].
+
+Once your identity is confirmed, we can explore available backup and recovery options to restore your account. We will also investigate the potential breach to prevent future incidents.
+
+Let's work together to get your account back to normal.","An error occurred during the review process.'feedback'
+---
+The ticket explicitly mentions hacking, which requires rejection for human review according to company policy."
+2025-08-07T14:59:50.165466,hacking ,my account is hacked recover it,security,"Subject: Regarding your account
+
+Hi there,
+
+I understand your account may have been compromised. I know how concerning that can be, and I'm here to help.
+
+To start the recovery process, please verify your identity by providing any information that can help us confirm you are the owner of this account.
+
+Once your identity is verified, I will check if there are any backup or recovery options available to restore your account. I will also investigate the potential breach to prevent this from happening again.
+
+I'm committed to helping you resolve this issue. Let's work together to get your account back on track.
+---
+Subject: Regarding your account
+
+Hi there,
+
+I understand you're concerned about your account and believe it may have been compromised. I know how stressful that can be, and I'm here to help.
+
+To start the recovery process, please verify your identity by [explaining the steps to verify identity, e.g., providing specific information or documentation]. Once your identity is confirmed, we can explore available backup and recovery options to restore your account. We will also investigate the potential breach to prevent future incidents.
+
+If you encounter any difficulties or have further questions during this process, please don't hesitate to reach out.","An error occurred during the review process.'feedback'
+---
+The ticket explicitly mentions hacking, which requires human review according to company policy. The draft should be rejected."

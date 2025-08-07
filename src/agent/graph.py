@@ -29,6 +29,7 @@ if not POSTGRES_CONNECTION_STRING:
 
 # === Nodes ===
 
+
 async def classify_ticket(state: State) -> State:
     """This function classifies the support ticket based on its subject and description.
 
@@ -50,22 +51,21 @@ async def classify_ticket(state: State) -> State:
     Returns:
         State: The updated state with the classified category.
     """
-    print("Invoking classifier LLM")
-    llm = get_llm()
-
-    if 'subject' not in state or 'description' not in state:
-        raise ValueError("State must contain both 'subject' and 'description' keys.")
-    if not state['subject'] or not state['description']:
-        raise ValueError("Subject and description must not be empty.")
-
-    structured_llm = llm.with_structured_output(Classification)
-    prompt = PromptTemplate.from_template(CLASSIFICATION_PROMPT)
-    prompt_value = prompt.invoke({
-        'subject': str(state['subject']),
-        'description': str(state['description'])
-    })
-
     try:
+        print("Invoking classifier LLM")
+        llm = get_llm()
+
+        if 'subject' not in state or 'description' not in state:
+            raise ValueError("State must contain both 'subject' and 'description' keys.")
+        if not state['subject'] or not state['description']:
+            raise ValueError("Subject and description must not be empty.")
+
+        structured_llm = llm.with_structured_output(Classification)
+        prompt = PromptTemplate.from_template(CLASSIFICATION_PROMPT)
+        prompt_value = prompt.invoke({
+            'subject': str(state['subject']),
+            'description': str(state['description'])
+        })
         classification_output = structured_llm.invoke(prompt_value)
         if classification_output.output not in ['billing', 'technical', 'security', 'general']:
             raise ValueError(f"Unexpected classification result: {classification_output.output}")
@@ -108,8 +108,10 @@ async def rag_node(state: State) -> State:
             collection_name="support_docs",
             connection=POSTGRES_CONNECTION_STRING,
         )
+        
 
-        query = f"{state['subject']} {state['description']}".strip()
+        # Construct the query using subject, description, and retrive_improve keywords
+        query = f"{state['subject']} {state['description']} {state.get('retrive_improve',[])}".strip()
         category = state['category'].lower()
 
         retriever = vectorstore.as_retriever(
@@ -154,14 +156,13 @@ async def generate_draft(state: State) -> State:
         context_text = "\n\n".join([doc.page_content for doc in state['context_docs']])
 
         prompt = PromptTemplate.from_template(DRAFT_RESPONSE_PROMPT)
-        if "feedback" not in state or not isinstance(state["feedback"], list):
-            state["feedback"] = []
+        
 
         prompt_value = prompt.invoke({
             "subject": state["subject"],
             "description": state["description"],
             "context": context_text,
-            "review": state["feedback"]
+            "review": state.get("feedback",[])
         })
 
         response = llm.invoke(prompt_value)
@@ -174,7 +175,7 @@ async def generate_draft(state: State) -> State:
         return state
     except Exception as e:
         print(f"Error during draft generation: {e}")
-        state["draft"].append("An error occurred while generating the draft response.")
+        state["draft"] = ["An error occurred while generating the draft response."]
         return state
     
 async def review_draft(state: State) -> State:
@@ -193,17 +194,20 @@ async def review_draft(state: State) -> State:
         print("Reviewing draft")
         llm = get_llm()
 
-        latest_draft = state["draft"][-1]
-        
+        latest_draft = state["draft"][-1] 
+        print(f"Latest draft for review: {latest_draft}")
 
         prompt = PromptTemplate.from_template(REVIEW_DRAFT_PROMPT)
         prompt_value = prompt.invoke({"latest_draft": latest_draft, "subject": state["subject"], "description": state["description"]})
-
+    
         structured_llm = llm.with_structured_output(ReviewResult)
         response = structured_llm.invoke(prompt_value)
-
+        if response.feedback is None:
+            raise ValueError("Feedback cannot be None. Please provide valid feedback.")
+        
         print(f"Review result: {response.status}, Feedback: {response.feedback}, Keywords: {response.retrive_improve}")
-
+        print("LLM Raw Response:", response)
+        print("Type of response:", type(response))
         if response.status == "rejected" and response.feedback:
             state["feedback"].append(response.feedback)
             state["review_count"] = state.get("review_count", 0) + 1
@@ -213,19 +217,21 @@ async def review_draft(state: State) -> State:
         else:
             state["status"] = "approved"
             state["feedback"].append("Draft approved by reviewer.")
-            state["review_count"] = 0
-
-        return state
+            state["review_count"] = state.get("review_count", 0) + 1
+            state['retrive_improve'] = response.retrive_improve or []
     except Exception as e:
         print(f"Error during draft review: {e}")
-        state["status"] = "rejected"
-        state["feedback"].append("An error occurred during the review process.")
-        state["review_count"] = state.get("review_count", 0) + 1
+        state["status"] = "rejected" 
+        state["feedback"]= [f"An error occurred during the review process.{e}"]
+        state["review_count"] = state.get("review_count", 0)  + 1
         state['retrive_improve'] = []
-        return state
+        
+    return state
+ 
     
     
-def dump_state_to_csv(state: State) -> State:
+    
+async def dump_state_to_csv(state: State) -> State:
     """this function dumps the state of a rejected ticket to a CSV file for record-keeping.
 
     It creates a directory named 'rejected_tickets' if it doesn't exist, and appends the ticket details to a CSV file.
@@ -260,6 +266,7 @@ def dump_state_to_csv(state: State) -> State:
             df.to_csv(filepath, mode="w", index=False, header=True, encoding="utf-8")
 
         print(f"Rejected ticket saved to {filepath}")
+        state["review_count"]=0
         return state
     except FileNotFoundError as fnf_error:
         print(f"File not found error during CSV dump: {fnf_error}")
@@ -282,7 +289,20 @@ def dump_state_to_csv(state: State) -> State:
         state["feedback"].append("An error occurred while dumping the ticket to CSV.")
         return state
 
-def route_based_on_review(state: State) -> str:
+
+async def format_output(state: State) -> Output:
+    """Formats the output based on the review status."""
+    print("Formatting output")
+    
+    if state["status"] == "approved":
+        return Output(message=state["draft"][-1])
+        state.clear()
+    else:
+        return Output(message="A human will review your issue.")
+        state.clear()
+
+
+async def route_based_on_review(state: State) -> str:
     """Routes the state based on the review status.
 
     If the review status is "approved", it routes to format_output.
@@ -292,18 +312,12 @@ def route_based_on_review(state: State) -> str:
     """
     if state['status'] == "approved":
         return "format_output"
-    elif state.get("review_count", 0) >= 2:
+    elif state.get("review_count", 0) >= 2 :
         return "dump_state"
     else:
         return "retriver"
 
-async def format_output(state: State) -> Output:
-    """Formats the output based on the review status."""
-    print("Formatting output")
-    if state["status"] == "approved":
-        return Output(message=state["draft"][-1])
-    else:
-        return Output(message="A human will review your issue.")
+
 
 # === Build and compile the state graph ===
 
