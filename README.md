@@ -1,4 +1,4 @@
-# Support Ticket
+# Support Ticket Resoution Agent
 This project implements a LangGraph api for a support ticket agent, utilizing a pgvector database for vector storage and retrieval. The application runs in Docker containers, exposing a secure API at http://127.0.0.1:2024 and integrating with LangSmith for the Studio UI.
 
 
@@ -129,6 +129,11 @@ To run locally without Docker:
 5. Intead of using multiple RAG nodes (one for each catagory ) I used filtered quires for filtering retrival docs based on catagory.
 6. Before extracting data from vector store i refreshed all the data inside of it so that the llm remain grounded in latest data. (Although this presents a computation overhead but our dataset in this case is very small so it doesn't matter much.)
 7. Because of small size of document instances in the dataset I have skipped splitting and merging of documents.
+## Demo Video link
+Here is the drive link to demo video.
+```bash
+https://drive.google.com/file/d/1dayglm9VS5OYjLniTkfV8QxNyNQ8jJJS/view?usp=drive_link
+```
 
 ## Contributing
 
