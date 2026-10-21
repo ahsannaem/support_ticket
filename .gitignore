@@ -166,3 +166,11 @@ cython_debug/
 #.idea/
 uv.lock
 .langgraph_api/
+
+# Local checkpoints, approval authority and test data
+.support-data*/
+.test-tmp/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
