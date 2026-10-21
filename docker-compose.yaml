@@ -2,9 +2,9 @@ services:
   pgvector:
     image: pgvector/pgvector:pg16
     environment:
-      - POSTGRES_USER=langchain
-      - POSTGRES_PASSWORD=langchain
-      - POSTGRES_DB=langchain
+      POSTGRES_USER: langchain
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD for your local database}
+      POSTGRES_DB: langchain
     volumes:
       - pgvector-data:/var/lib/postgresql/data
     healthcheck:
@@ -12,26 +12,18 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-
-  langgraph:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    env_file:
-      - .env
+  agent:
+    build: .
+    env_file: .env
     environment:
-      - POSTGRES_CONNECTION_STRING=postgresql+psycopg://langchain:langchain@pgvector:5432/langchain
-      - DATABASE_URI=postgresql://langchain:langchain@pgvector:5432/langchain
-      - REDIS_URI=None
-      - PYTHONPATH=/app:/app/src
+      POSTGRES_CONNECTION_STRING: postgresql+psycopg://langchain:${POSTGRES_PASSWORD}@pgvector:5432/langchain
     depends_on:
       pgvector:
         condition: service_healthy
-    ports:
-      - "127.0.0.1:2024:2024"
     volumes:
-      - .:/app
-    command: langgraph dev --allow-blocking
-
+      - support-state:/app/.support-data
+    # Use docker compose run --rm agent <runtime arguments>.
+    command: ["--help"]
 volumes:
   pgvector-data:
+  support-state:

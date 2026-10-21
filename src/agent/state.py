@@ -1,32 +1,24 @@
+"""Serializable workflow state."""
 
-from dataclasses import dataclass
-from pydantic import BaseModel
-from dataclasses import dataclass, field
-from typing import Literal, TypedDict, List
+from typing import Any
+
+from typing_extensions import TypedDict
 
 
-
-@dataclass(kw_only=True)
-class State(TypedDict):
-    """Represents state of our graph.
-
-    Args:
-        TypedDict (_type_): _description_
-        Subject : The subject of support ticket
-        description : The description of our support ticket
-        classification (Literal["Billing", "Technical", "Security", "General"]):
-            The classified category of the ticket.
-        context (str): Relevant contextual information retrieved for the ticket.
-        draft_response (str): The drafted response to the user.
-        review_feedback (str): Feedback from the reviewer on the draft.
-        retry_count (int): Number of times the draft has been re-attempted.
-    """
+class State(TypedDict, total=False):
+    ticket_id: str
     subject: str
     description: str
-    category: Literal["billing", "technical", "security", "general"]
-    context_docs:  str
-    draft: List[str]
-    review_count: int 
-    feedback: List[str]
-    status: Literal['approved','rejected']
-    retrive_improve: List[str]
+    category: str
+    context_docs: list[dict[str, Any]]
+    draft: list[str]
+    review_count: int
+    feedback: list[str]
+    model_status: str
+    status: str
+    retrive_improve: list[str]
+    evaluation: dict[str, Any]
+    proposal: dict[str, str]
+    proposal_hash: str
+    receipt: dict[str, Any]
+    message: str

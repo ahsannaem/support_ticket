@@ -1,19 +1,25 @@
+"""Provider result and public graph schemas."""
 
-from typing import List, Optional, TypedDict
 from pydantic import BaseModel
-from typing_extensions import Literal
+from typing_extensions import Literal, TypedDict
+
 
 class Classification(BaseModel):
     output: Literal["billing", "technical", "security", "general"]
 
+
 class ReviewResult(BaseModel):
     status: Literal["approved", "rejected"]
-    feedback: Optional[str]
-    retrive_improve: Optional[List[str]]
+    feedback: str
+    retrive_improve: list[str]
+
 
 class Input(TypedDict):
+    ticket_id: str
     subject: str
     description: str
 
-class Output(BaseModel):
+
+class Output(TypedDict):
     message: str
+    status: str
